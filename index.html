@@ -2,12 +2,26 @@
 <html>
     <head>
         <title>Jordan's Simple Web Page</title>
+        <style>
+            body {
+                background-color:#ABD3FE;
+                margin: 0 100px 0 100px;
+            }
+            h1 {
+                text-align: center;
+            }
+            #content-box {
+                background-color: #CFE6FF;
+                padding: 50px;
+                margin-bottom: 50px;
+            }
+        </style>
     </head>
     <body>
-        <img src="/images/html-logo.png" alt="The HTML logo" height="75px">
-        <h1>This is Jordan's Simple Web Page</h1>
+        <h1><img src="/images/html-logo.png" alt="The HTML logo" height="75px"><br>This is Jordan's Simple Web Page</h1>
 
-            <img src="/images/git-logo.png" alt="The Git logo" height="20px">
+        <div id="content-box">
+        <img src="/images/git-logo.png" alt="The Git logo" height="20px">
             <h2>What is the GitHub Workflow?</h2>
 
                 <h3>What is a commit?</h3>
@@ -20,12 +34,15 @@
                 <p>A pull request is essentially a notification to your team that you would like them to have a look at the changes made to the code so far in your branch. This can either be with the intent of then merging the changes in, or getting feedback in order to make the changes even better. After a pull request is opened, members of the team can comment and collaborate about whether the changes are up to par with expectations, and if not, extra commits can be added by other people on the team (or yourself). Once a pull request has been approved, it can then be merged into the 'main' or 'master' branch, and the branch it stems from can also be closed off and deleted.</p>
                 
                 <h3>Any other information about Git?</h3>
+            </div>    
             
+            <div id="content-box">
             <img src="/images/unix-logo.png" alt="The Unix logo" height="50px">
             <h2>What is the Unix Shell?</h2>
                 <h3>How do you list the files in a directory?</h3>
                 <h3>How do you show and change the current working directory?</h3>
                 <h3>How do you create a new directory?</h3>
                 <h3>How do you create and remove files?</h3> 
+            </div>
     </body>
 </html>

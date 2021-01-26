@@ -15,6 +15,11 @@
                 padding: 50px;
                 margin-bottom: 50px;
             }
+            p img {
+                margin-top: 10px;
+                height: 110px;
+                max-width: 100%;
+            }
         </style>
     </head>
     <body>
@@ -45,12 +50,15 @@
                 <p>The command to list the files that exist in your current directory is <b>ls</b>. Files from other directories can be listed by typing <b>ls [path to directory]</b>, for example <b>ls /Desktop/Work</b> will list all the contents of the <i>Work</i> folder on your desktop. Flags can also be added to the parameters of the search, which allows you to define extra options for the items listed. One example is <b>ls -a</b>, which will list all files, including hidden files starting with just a dot, such as the hidden <i>.git</i> file that is created when making a folder a git repository. <br>These can be combined as such: <b>ls -a /Desktop/Work</b>. A further list of flags that can be added to the <b>ls</b> command can be found <a href="https://www.techonthenet.com/unix/basic/ls.php" title="Unix Commands - ls">here.</a></p>
 
                 <h3>How do you show and change the current working directory?</h3>
-
+                <p>The current working directory can be printed into the console by typing <b>pwd</b>, which literally stands for <i>print working directory</i>. This will just give a line of text stating the full path to where you currently are at in relation to your root folder. To change to a different folder, you can type <b>cd [new folder name]</b>. Here is an example where I start in my project folder, print the working directory, list the contents of my current folder, and then navigate into the <i>images</i> folder using <b>cd images</b>, and then on the last line you can see I am inside the /images folder: <br><img src="images\pwd-and-cd.png" title="Example showing how to print working directory and change directory using Unix"></p>
 
                 <h3>How do you create a new directory?</h3>
-
+                <p>A new directory can be created using the command <b>mkdir [new folder name]</b>. This will make the new directory inside the directory you are currently in. For example, if you wanted to create a new directory called <i>example</i>, type into the command line <b>mkdir example</b>. This can be seen below: <br><img src="images\mkdir.png" title="Example showing how to make a new directory using Unix"></p>
+                <p>It's also possible to create a new directory in a folder you <i>aren't</i> currently in, and that can be done by typing <b>mkdir [path to directory you want to create new folder in]/[new folder name]</b>. An example of this is if we want to create a folder called <i>new-example</i> inside of the <i>example</i> folder we just made, but without ever entering the <i>example</i> folder ourselves, we can type <b>mkdir example/new-example</b>.</p>
 
                 <h3>How do you create and remove files?</h3> 
+                <p>A new empty file can be created using Unix with the <b>touch</b> command. To create a new file named <i>new-file</i>, simply type <b>touch new-file</b>, and it will create an empty file with that name. In order to create a new file and instantly be able to put content inside of it, Unix has a built-in text editor called <i>Nano</i>, much like <i>Notepad</i> for Windows computers. To access this and create a new file using it, simply type <b>nano new-file</b>, and it will open up the <i>Nano</i> text editor for you to write content in. Once this has been finished and the file is saved, the new file titled <i>new-file</i> will have been created inside your current folder. I have put an image below to show the process of creating files using both of these methods, not including the part where you input text into the file using the <i>Nano</i> text editor. <br><img src="images\creating-files.png" title="Example showing how to create new files using Unix, with both touch and nano"></p>
+                <p>To remove files using Unix, the command <b>rm [file name]</b> can be used. This same command can be used to remove empty directories, but a flag is needed, as the system requires explicit permission to remove whole folders - the command would be <b>rm -d [folder name]</b>. An extra flag can be added to remove a directory that is not empty - <b>rm -d -r [folder name]</b>.<br><img src="images\removing-files.png" title="Example showing how to remove files using Unix"></p>
 
             </div>
     </body>
